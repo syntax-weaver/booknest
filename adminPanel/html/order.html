@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product List with Order Details Modal</title>
+
+    <!-- Bootstrap CSS & Icons -->
+    <link
+      href="/user/Js/bootstrap-5.3.7-dist/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link href="/user/Css/fontAwesom/all.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/order.css" />
+    <link rel="stylesheet" href="../css/noti.css" />
+  </head>
+
+  <body>
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar"></nav>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+          <div class="topbar">
+            <button class="mobile-toggle" id="mobileToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h4 class="mb-0">Orders</h4>
+            <div></div>
+            <!-- Empty div for flexbox spacing -->
+          </div>
+          <div class="p-4">
+            <table class="table align-middle table-hover orders-table">
+              <thead>
+                <tr>
+                  <th scope="col">cover</th>
+                  <th scope="col">Book Name</th>
+                  <th scope="col">Customer Name</th>
+                  <th scope="col">Date Of Order</th>
+                  <th scope="col">User</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody id="table-info"></tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div
+      class="modal fade"
+      id="orderDetailsModal"
+      tabindex="-1"
+      aria-labelledby="orderDetailsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow-sm">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="orderDetailsModalLabel">
+              Order Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-4 py-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="/user/Js/bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+    <script src="../js/get_admin_name.js"></script>
+
+    <script type="module" src="../js/order.js"></script>
+    <script src="../js/order-details.js"></script>
+  </body>
+</html>

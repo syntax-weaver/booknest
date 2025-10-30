@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--font-color);
+}
+:root {
+    --font-color: #777777;
+    --headings-color: #222222;
+    --background-color: #EDEBE4;
+    --sub-background: #EAE8DF;
+    --hover-bg-color: #FBFAF8;
+    --line-color: #E0E0E0;
+    --price-font-color:#74642F;
+}
+body,
+.book-img,
+.trash-icon,
+.cart-icon {
+    background-color: var(--background-color);
+}
+.container {
+    width: 80%;
+}
+img {
+    width: 125px;
+    height: 200px;
+}
+h2, .card-title{
+    color: var(--headings-color);
+}
+.price{
+    color: var(--price-font-color);
+}
+i {
+    font-size: 20px;
+}
+.icons>div {
+    padding: 10px;
+}
+.icons>div:hover{
+    transform: scale(1.1);
+    color:rgb(158, 14, 14);
+
+}
+   /* quantity selector */
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            max-width: 140px;
+        }
+
+        .quantity-selector button {
+            width: 38px;
+            height: 38px;
+            border-radius: 0;
+        }
+
+        .quantity-selector input[type="number"] {
+            text-align: center;
+            height: 38px;
+            width: 60px;
+            border-left: none;
+            border-right: none;
+        }

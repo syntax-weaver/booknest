@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book - Nest</title>
+    <link rel="stylesheet" href="Js/bootstrap-5.3.7-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="Css/fontAwesom/all.css" />
+    <link rel="stylesheet" href="Css/Home/booknest.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ===============================  Hero Section Start ============================================= -->
+    <section class="hero-section position-relative" id="heroId">
+      <!-- background video -->
+      <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="../Assets/videos/blury_book.mp4" type="video/mp4" />
+        your browser does not support the video tag.
+      </video>
+
+      <!-- content -->
+      <!-- ------------------------------------------------------------------------- -->
+      <div id="navbar"></div>
+      <!-- ------------------------------------------------------------------------- -->
+      <div
+        class="container h-100 position-relative z-1 d-flex align-items-center"
+      >
+        <div class="row w-100">
+          <div class="col-md-7 text-white hero-content">
+            <h1 class="hero-title display-4 fw-bold">
+              Discover Your Next Favorite Book
+            </h1>
+            <p class="hero-subtitle lead">
+              Explore thousands of titles from top authors in every genre.
+            </p>
+            <a href="productCatalog.html" class="hero-btn px-4 py-2"
+              >Start Shopping</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="hero-overlay position-absolute top-0 start-0 w-100 h-100"
+      ></div>
+    </section>
+    <!-- =============================== Hero Section End ============================================= -->
+    <!-- =============================== Categories Start ============================================= -->
+    <section class="featured-categories">
+      <div class="container text-center">
+        <h2 class="cat-title section-title mb-4 text-light">
+          Featured Categories
+        </h2>
+        <!-- <div class="cat-slider" style="--cat-width: 200px; --cat-height: 50px; --cat-quantity: 10;">
+          <div class="cat-list d-flex align-items-center justify-content-around">
+            <div class="cat-item" style="--cat-position: 1"><i class="fa-solid fa-book-open"></i></i><p>Fiction</p></div>
+            <div class="cat-item" style="--cat-position: 2"><i class="fa-solid fa-book"></i><p>Non-Fiction</p></div>
+            <div class="cat-item" style="--cat-position: 3"><i class="fa-solid fa-user-secret"></i><p>Mystery & Thriller</p></div>
+            <div class="cat-item" style="--cat-position: 4"><i class="fa-solid fa-rocket"></i><p>Science Fiction & Fantasy</p></div>
+            <div class="cat-item" style="--cat-position: 5"><i class="fa-solid fa-heart"></i><p>Romance</p></div>
+            <div class="cat-item" style="--cat-position: 6"><i class="fa-solid fa-user"></i><p>Biographies & Memoirs</p></div>
+            <div class="cat-item" style="--cat-position: 7"><i class="fa-solid fa-seedling"></i><p>Self-Help & Personal Dev.</p></div>
+            <div class="cat-item" style="--cat-position: 8"><i class="fa-solid fa-children"></i><p>Children's Books</p></div>
+            <div class="cat-item" style="--cat-position: 9"><i class="fa-solid fa-landmark-dome"></i><p>History</p></div>
+            <div class="cat-item" style="--cat-position: 10"><i class="fa-solid fa-graduation-cap"></i><p>Educational & Academic</p></div>          
+          </div>
+        </div> -->
+
+        <div
+          class="cat-slider"
+          style="--cat-width: 200px; --cat-height: 100px; --cat-quantity: 10"
+        >
+          <!-- populate with JS -->
+        </div>
+        <div class="text-end mt-2">
+          <a
+            href="productCatalog.html"
+            class="btn text-decoration-none more-categories p-3 text-dark"
+            >View All Categories</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- =============================== Categories End ============================================= -->
+
+    <!-- =============================== New Arrivals Start ============================================= -->
+    <section class="new-arrivals">
+      <div class="container">
+        <h2 class="section-title arrivals-title text-center pb-5 pt-5">
+          New Arrivals
+        </h2>
+        <!-- slider -->
+        <div class="banner">
+          <div class="slider" id="new-arrivals-slider" style="--quantity: 8">
+            <!-- populate with js -->
+          </div>
+          <div
+            class="content d-flex flex-column align-items-center text-center"
+          >
+            <div class="model"></div>
+            <div class="">
+              <a
+                href="productCatalog.html"
+                class="btn text-decoration-none more-categories text-light"
+                >View All New Arrivals</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============================== New Arrivals End ============================================= -->
+
+    <!-- =============================== Featured Books Start ============================================= -->
+    <section class="best-seller">
+      <div class="container">
+        <h2 class="section-title best-title text-center pb-5 pt-5">
+          Best Sellers
+        </h2>
+        <!-- slider -->
+        <div class="banner">
+          <div class="slider" id="best-sellers-slider" style="--quantity: 8">
+            <!-- populate with js -->
+          </div>
+          <div
+            class="content d-flex flex-column align-items-center text-center"
+          >
+            <div class="model"></div>
+            <div class="">
+              <a
+                href="productCatalog.html"
+                class="btn text-decoration-none more-categories text-light"
+                >View All Best Sellers</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============================== Featured Books End ============================================= -->
+
+    <!-- =============================== Why Choose Us Start ============================================= -->
+    <section class="why-us py-5">
+      <div class="container">
+        <h2 id="why-title" class="why-title section-title text-center mb-3">
+          Why BookNest
+        </h2>
+        <p class="why-subtitle text-center text-muted mb-5">
+          Quality, convenience and service - everything a reader needs.
+        </p>
+
+        <div class="row" id="why-row">
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="why-card text-center p-4 h-100 shadow-sm rounded">
+              <div class="why-icon mb-3">
+                <i class="fas fa-shipping-fast fa-2x"></i>
+              </div>
+              <h5 class="why-card-title mb-2">Free & Fast Delivery</h5>
+              <p class="why-card-subtitle text-muted small">
+                Get your books delivered quickly, without any extra cost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============================== Why Choose Us End ============================================= -->
+    <!-- =============================== Footer Start ============================================= -->
+    <footer class="footer bg-dark pt-5" id="footerId">
+      <div class="container">
+        <div class="row">
+          <!-- brand + about -->
+          <div class="col-12 col-md-6 col-lg-4 text-center text-md-start mb-4">
+            <h5 class="mb-3">BookNest</h5>
+            <p>
+              Your go-to place for books that inspire, educate, and entertain.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- quick links -->
+          <div class="col-12 col-md-6 col-lg-4 text-center text-md-start mb-4">
+            <h5 class="mb-3">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-decoration-none">Home</a></li>
+              <li><a href="#" class="text-decoration-none">Shop</a></li>
+              <li><a href="#" class="text-decoration-none">Contact</a></li>
+              <li><a href="#" class="text-decoration-none">About</a></li>
+            </ul>
+          </div>
+
+          <!-- contact info -->
+          <div class="col-12 col-md-6 col-lg-4 text-center text-md-start mb-4">
+            <h5 class="mb-3">Contact</h5>
+            <p>Email: info@booknest.com</p>
+            <p>Phone: +1 23456789</p>
+            <p>Address: 123 Book Street, Library City</p>
+          </div>
+        </div>
+
+        <!-- bottom bar -->
+        <div class="text-center border-top pt-2 pb-1">
+          <p class="mb-0">&copy; 2025 BookNest. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =============================== Footer End ============================================= -->
+
+    <script src="Js/bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+    <script src="Js/all.min.js"></script>
+    <!-- <script src="Js/startup/loadBooks.js"></script> -->
+    <script type="module" src="Js/booknest.js"></script>
+  </body>
+</html>

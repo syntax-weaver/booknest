@@ -1,0 +1,90 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--font-color);
+}
+:root {
+--font-color:#777777 ;
+--headings-color:#111111;
+--background-color:#EDEBE4;
+--sub-background:#EAE8DF ;
+--hover-bg-color:#FBFAF8;
+--line-color:#E0E0E0;
+}
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .contact_us {
+            background-color: var(--sub-background);
+            height: 40dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .get_in_touch {
+            padding: 4rem 0;
+            /* background-color:floralwhite; */
+        }
+
+        .community {
+            background-color: var(--sub-background);
+            padding: 4rem 0;
+        }
+
+        i{
+             color: var(--sub-background);
+        }
+        .social-icons i {
+
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+        }
+
+        .form-control,
+        .btn {
+            border-radius: 0;
+        }
+
+        .btn-primary {
+            background-color: var(--sub-background);
+            color: black;
+            border: none;
+        }
+        .btn-subscribe{
+            background-color: whitesmoke;
+        }
+
+        .book-images {
+            position: relative;
+            height: 300px;
+        }
+
+        .book-images img {
+            position: absolute;
+            width: 180px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .book-images img:first-child {
+            transform: rotate(-5deg);
+            left: 0;
+            z-index: 1;
+        }
+
+        .book-images img:last-child {
+            transform: rotate(5deg);
+            left: 120px;
+            z-index: 2;
+        }
+        .card:hover{
+            transform: scale(1.1);
+
+        }

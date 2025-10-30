@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--font-color);
+}
+:root {
+--font-color:#777777 ;
+--headings-color:#111111;
+--background-color:#EDEBE4;
+--sub-background:#EAE8DF ;
+--hover-bg-color:#FBFAF8;
+}
+.container{
+    width: 70%;
+}
+.payment{
+    background-color:var(--background-color);
+}
+h2{
+    color:var(--headings-color);
+}
+.payment-method>div{
+    cursor: pointer;
+}
+.payment-method>div:hover, #modal-btn:hover{
+    background-color: var(--hover-bg-color);
+}
+#modal-btn{
+    font-size: 20px;
+    color: var(--font-color);
+}
+#confirm-icon{
+    background-color: var(--sub-background);
+}
+.cart-summary{
+    background-color: var(--hover-bg-color);
+}

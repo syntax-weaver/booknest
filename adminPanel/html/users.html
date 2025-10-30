@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Moderation Panel</title>
+
+    <!-- Bootstrap CSS & Icons -->
+    <link
+      href="/user/Js/bootstrap-5.3.7-dist/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link href="/user/Css/fontAwesom/all.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/user/Css/fontAwesom/all.css" />
+    <link rel="stylesheet" href="../css/users.css" />
+    <link rel="stylesheet" href="../css/noti.css" />
+  </head>
+  <body>
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar"></nav>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+          <div class="topbar">
+            <button class="mobile-toggle" id="mobileToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h4 class="mb-0">Admin Moderation Panel</h4>
+            <div></div>
+            <!-- Empty div for flexbox spacing -->
+          </div>
+
+          <div class="container py-4">
+            <div class="mb-4 text-center">
+              <h2 class="fw-bold">Admin Moderation Panel</h2>
+              <p class="text-muted">
+                Manage user accounts and approve seller requests
+              </p>
+            </div>
+
+            <!-- Top Card -->
+            <div class="card shadow-sm mb-4">
+              <div class="card-header">
+                <h5 class="fw-semibold mb-2 mb-md-0">
+                  Activate / Deactivate Users
+                </h5>
+                <div class="d-flex gap-2">
+                  <label
+                    for="userFilter"
+                    class="form-label mb-0 align-self-center fw-semibold text-secondary"
+                    >Filter:</label
+                  >
+                  <select
+                    id="userFilter"
+                    class="form-select form-select-sm w-auto"
+                  >
+                    <option value="all">All</option>
+                    <option value="user">Users</option>
+                    <option value="seller">Sellers</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table
+                    class="table table-hover align-middle mb-0"
+                    id="userTable"
+                  >
+                    <thead class="table-light">
+                      <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th class="text-center">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>USR001</td>
+                        <td>John Doe</td>
+                        <td>Buyer</td>
+                        <td class="status-active">Active</td>
+                        <td class="text-center">
+                          <button class="btn btn-danger btn-sm">
+                            Deactivate
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>USR002</td>
+                        <td>Jane Smith</td>
+                        <td>Seller</td>
+                        <td class="status-inactive">Inactive</td>
+                        <td class="text-center">
+                          <button class="btn btn-success btn-sm">
+                            Activate
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>USR003</td>
+                        <td>Robert Johnson</td>
+                        <td>Buyer</td>
+                        <td class="status-active">Active</td>
+                        <td class="text-center">
+                          <button class="btn btn-danger btn-sm">
+                            Deactivate
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>USR004</td>
+                        <td>Sarah Williams</td>
+                        <td>Seller</td>
+                        <td class="status-active">Active</td>
+                        <td class="text-center">
+                          <button class="btn btn-danger btn-sm">
+                            Deactivate
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Card -->
+            <div class="card shadow-sm">
+              <div class="card-header">
+                <h5 class="mb-0 fw-semibold">
+                  Approve Users to Become Sellers
+                </h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table
+                    class="table table-hover align-middle mb-0"
+                    id="sellerApprovalTable"
+                  >
+                    <thead class="table-light">
+                      <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Current Role</th>
+                        <th class="text-center">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>USR005</td>
+                        <td>Michael Brown</td>
+                        <td>Buyer</td>
+                        <td class="text-center">
+                          <button class="btn btn-success btn-sm me-1">
+                            Approve
+                          </button>
+                          <button class="btn btn-danger btn-sm">Reject</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>USR006</td>
+                        <td>Emily Davis</td>
+                        <td>Buyer</td>
+                        <td class="text-center">
+                          <button class="btn btn-success btn-sm me-1">
+                            Approve
+                          </button>
+                          <button class="btn btn-danger btn-sm">Reject</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>USR007</td>
+                        <td>David Wilson</td>
+                        <td>Buyer</td>
+                        <td class="text-center">
+                          <button class="btn btn-success btn-sm me-1">
+                            Approve
+                          </button>
+                          <button class="btn btn-danger btn-sm">Reject</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="/user/Js/bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+    <script type="module" src="../js/users.js"></script>
+    <script src="../js/get_admin_name.js"></script>
+    <!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sidebar = document.getElementById('sidebar');
+      const mainContent = document.getElementById('mainContent');
+      const toggleSidebar = document.getElementById('toggleSidebar');
+      const mobileToggle = document.getElementById('mobileToggle');
+      const overlay = document.getElementById('overlay');
+      
+      // Check if sidebar state is saved in localStorage
+      const isSidebarCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+      
+      if (isSidebarCollapsed) {
+        collapseSidebar();
+      }
+      
+      // Toggle sidebar on button click
+      toggleSidebar.addEventListener('click', function() {
+        if (sidebar.classList.contains('collapsed')) {
+          expandSidebar();
+        } else {
+          collapseSidebar();
+        }
+      });
+      
+      // Toggle sidebar on mobile
+      mobileToggle.addEventListener('click', function() {
+        sidebar.classList.toggle('show');
+        overlay.classList.toggle('active');
+      });
+      
+      // Close sidebar when clicking on overlay
+      overlay.addEventListener('click', function() {
+        sidebar.classList.remove('show');
+        overlay.classList.remove('active');
+      });
+      
+      function collapseSidebar() {
+        sidebar.classList.add('collapsed');
+        mainContent.classList.add('expanded');
+        toggleSidebar.innerHTML = '<i class="fas fa-chevron-right"></i>';
+        localStorage.setItem('sidebarCollapsed', 'true');
+      }
+      
+      function expandSidebar() {
+        sidebar.classList.remove('collapsed');
+        mainContent.classList.remove('expanded');
+        toggleSidebar.innerHTML = '<i class="fas fa-chevron-left"></i>';
+        localStorage.setItem('sidebarCollapsed', 'false');
+      }
+      
+      // Handle window resize
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 992) {
+          sidebar.classList.remove('show');
+          overlay.classList.remove('active');
+        }
+      });
+
+      // Add functionality to buttons
+      const activateButtons = document.querySelectorAll('.btn-success');
+      const deactivateButtons = document.querySelectorAll('.btn-danger');
+      
+      activateButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const row = this.closest('tr');
+          const statusCell = row.querySelector('td:nth-child(4)');
+          statusCell.textContent = 'Active';
+          statusCell.className = 'status-active';
+          this.textContent = 'Deactivate';
+          this.classList.remove('btn-success');
+          this.classList.add('btn-danger');
+        });
+      });
+      
+      deactivateButtons.forEach(button => {
+        if (!button.textContent.includes('Reject')) {
+          button.addEventListener('click', function() {
+            const row = this.closest('tr');
+            const statusCell = row.querySelector('td:nth-child(4)');
+            statusCell.textContent = 'Inactive';
+            statusCell.className = 'status-inactive';
+            this.textContent = 'Activate';
+            this.classList.remove('btn-danger');
+            this.classList.add('btn-success');
+          });
+        }
+      });
+
+      // Filter functionality
+      const userFilter = document.getElementById('userFilter');
+      userFilter.addEventListener('change', function() {
+        const filterValue = this.value;
+        const rows = document.querySelectorAll('#userTable tbody tr');
+        
+        rows.forEach(row => {
+          const role = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
+          
+          if (filterValue === 'all' || role === filterValue) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script> -->
+  </body>
+</html>

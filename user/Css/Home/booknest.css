@@ -1,0 +1,449 @@
+:root {
+  --color-1: #111111;
+  --color-2: #000000;
+  --color-3: #0a0a0a;
+  --color-4: #222222;
+  --color-5: #333333;
+  --color-6: #e1dfd6;
+  --color-7: #e9e7e0;
+  --color-8: #edebe4;
+  --color-9: #edece6;
+  --color-10: #e5e5e5;
+  --color-11: #d7d5cc;
+  --color-12: #e0e0e0;
+  --color-13: #e5e3da;
+  --color-14: #777777;
+  --color-15: #7a7a7a;
+  --color-16: #888888;
+  --color-17: #9f9f9f;
+  --color-18: #74642f;
+  --color-19: #efeee8;
+  --color-20: #e5e4de;
+  --color-21: #c0c0c0;
+  --color-22: #8c8c8c;
+  --color-23: #eae8df;
+  --color-24: #9a884c;
+  --color-25: #94928b;
+  --color-26: #ec7e18;
+  --color-27: #ff9c00;
+}
+body {
+  /* background-color: ghostwhite; */
+  background-color: #e1dfd6;
+  /* height: 300vh; */
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+p {
+  color: var(--color-14);
+}
+h1 {
+  color: var(--color-5);
+}
+
+/* ========================== Upper Nav Bar Start ======================== */
+
+/* ========================== Upper Nav Bar End ======================== */
+
+/* ========================== Main Nav Bar Start ======================== */
+.main-navbar {
+  transition: all 0.3s ease;
+  background: rgba(1, 1, 1, 0.2);
+  backdrop-filter: blur(6px);
+  z-index: 1030;
+}
+.main-navbar.sticky-active {
+  position: fixed;
+  transform: scale(0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(1, 1, 1, 0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+.main-navbar .logo {
+  color: var(--color-10);
+}
+.main-navbar .nav-link.home-link {
+  color: var(--color-24);
+  font-weight: 600;
+}
+.main-navbar .nav-link:not(home-link),
+.upper-nav-link {
+  color: var(--color-10);
+  transition: color 0.3s ease;
+}
+.main-navbar .nav-link:not(home-link):hover {
+  color: var(--color-24);
+}
+
+/* dropdown menu overall box */
+.dropdown-menu {
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  min-width: 180px;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-item {
+  padding: 10px 20px;
+  color: var(--color-10);
+  transition: all 0.2s ease;
+  border-radius: 5px;
+}
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+/* ========================== Main Nav Bar End ======================== */
+
+/* ========================== Search Component Start ======================== */
+.search-wrapper .search-input {
+  width: 0;
+  padding: 0;
+  opacity: 0;
+  border: none;
+  background-color: transparent;
+  /* border-bottom: 1px solid #ccc; */
+  outline: none;
+  transition: width 0.4s ease, opacity 0.4s ease;
+}
+.search-wrapper .search-input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.search-wrapper .search-input.show {
+  width: 250px;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 7px 25px;
+  border-radius: 20px;
+  color: whitesmoke;
+}
+/* ================================= Search Component End =================================== */
+
+/* ================================= Hero Section Start ===================================== */
+.hero-section {
+  height: 100vh;
+  transition: all 0.7s ease-in-out;
+  padding: 60px 0;
+}
+.hero-content {
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-13);
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-13);
+  margin-bottom: 30px;
+}
+.hero-btn {
+  color: var(--color-6);
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+.hero-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transform: scaleY(-15px);
+  color: white;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-section .container {
+  z-index: 2;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-section .hero-content {
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+/* ================================= Hero Section End ===================================== */
+
+/* ================================ New Arrivals Start ====================================== */
+.new-arrivals {
+  background-image: url("../../../Assets/images/new_arrivals.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: var(--color-8); */
+}
+.arrivals-title {
+  color: var(--color-23) !important;
+}
+.banner {
+  width: 100%;
+  height: 160vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.banner .slider {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 50s linear infinite;
+  transition: transform 2s;
+  z-index: 2;
+}
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-13deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-13deg) rotateY(360deg);
+  }
+}
+.banner .slider .item {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(150, 150, 150, 0.3);
+
+  position: absolute;
+  inset: 0 0 0 0;
+  transition: transform 2s;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(400px);
+}
+
+.banner .slider .item img {
+  width: 60%;
+  height: 60%;
+  margin: auto;
+  object-fit: cover;
+}
+.banner .slider .item img:hover,
+.banner .slider .item h5:hover {
+  cursor: pointer;
+}
+.banner .slider .item h5 {
+  font-size: small;
+  color: var(--color-10);
+  height: 5%;
+}
+.banner .slider .item p {
+  font-size: smaller;
+  color: var(--color-21) !important;
+  height: 5%;
+}
+.banner .slider .item button {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.banner .slider .item button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner .slider:hover {
+  animation-play-state: paused;
+}
+
+.banner .content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: max-content;
+  padding-bottom: 100px;
+
+  z-index: 1;
+}
+/* ================================ New Arrivals End ====================================== */
+
+/* ================================ Categories Start ====================================== */
+.featured-categories {
+  background-color: var(--color-23);
+}
+.cat-title,
+.best-title {
+  color: var(--color-5) !important;
+}
+.cat-slider {
+  width: 100%;
+  height: var(--cat-height);
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 10% 90%,
+    transparent
+  );
+}
+.cat-slider .cat-list {
+  height: 100%;
+  width: 100%;
+  min-width: calc(var(--cat-width) * var(--cat-quantity));
+  position: relative;
+}
+.cat-slider .cat-list .cat-item {
+  width: var(--cat-width);
+  height: var(--cat-height);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: catAutoRun 20s linear infinite;
+  transition: filter 0.5s;
+  transition: all 1s;
+  animation-delay: calc(
+    (20s / var(--cat-quantity)) * (var(--cat-position) - 1)
+  ) !important;
+  overflow: hidden;
+}
+.cat-slider .cat-list .cat-item img,
+.cat-slider .cat-list .cat-item i {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  display: block;
+}
+.cat-slider .cat-item .cat-name {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+@keyframes catAutoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--cat-width) * -1);
+  }
+}
+.cat-slider:hover .cat-item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+.cat-slider .cat-item:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+}
+.cat-slider[reverse="true"] .cat-item {
+  animation: reversePlay 20s linear infinite;
+}
+@keyframes reversePlay {
+  from {
+    left: calc(var(--cat-width) * -1);
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.featured-categories {
+  padding: 60px 0;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-1);
+}
+/* ================================ Categories End ======================================== */
+/* ================================ Featured Books Start ======================================== */
+.best-seller {
+  background-image: url("../../../Assets/images/best_sellers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* ================================ Featured Books End ======================================== */
+/* ================================ Why Us Start ======================================== */
+.why-us {
+  padding: 60px 0;
+}
+.why-card {
+  background-color: var(--color-8);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: var(--color-4);
+  text-decoration: none;
+}
+.why-card:hover {
+  background-color: var(--color-7);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  color: var(--color-18);
+}
+.why-icon {
+  color: var(--color-4);
+}
+/* ================================ Why Us End ======================================== */
+
+/* ================================ Footer Start ======================================== */
+.footer h5 {
+  color: var(--color-13);
+}
+.footer ul li a,
+.footer p {
+  color: var(--color-16);
+}
+.footer .social-icons a {
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  color: var(--color-16);
+}
+.footer .social-icons a:hover,
+.footer ul li a:hover {
+  color: var(--color-13);
+  transform: scale(1.02);
+}
+/* ================================ Footer End ======================================== */

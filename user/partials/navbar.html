@@ -1,0 +1,113 @@
+<nav class="navbar navbar-expand-lg main-navbar p-3 top-0 start-0 w-100">
+  <div class="container-fluid">
+    <!-- left side (logo) -->
+    <a class="logo navbar-brand fw-bold ms-lg-3" href="home.html">BookNest</a>
+
+    <!-- toggler - visible only on small screens -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbarCollapse"
+      aria-controls="mainNavbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- right side navigation links -->
+    <div class="collapse navbar-collapse" id="mainNavbarCollapse">
+      <div
+        class="nav-links d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-2 gap-lg-4 mt-2 mt-lg-0 ms-lg-auto me-lg-3"
+      >
+        <a class="nav-link home-link text-decoration-none" href="home.html"
+          >HOME</a
+        >
+        <!-- <a class="nav-link text-decoration-none" href="#">SHOP</a> -->
+        <!-- categories dropdown -->
+        <div class="dropdown">
+          <a
+            class="nav-link text-decoration-none dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            >CATEGORIES</a
+          >
+          <ul class="dropdown-menu" id="cat-drop-down">
+            <li>
+              <a
+                class="dropdown-item"
+                href="productCatalog.html?catagory=fiction"
+                >Fiction</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="productCatalog.html?catagory=non-fiction"
+                >Non-Fiction</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="productCatalog.html?catagory=children"
+                >Children</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a class="nav-link text-decoration-none" href="contact.html">CONTACT</a>
+        <a class="nav-link text-decoration-none" href="about.html">ABOUT</a>
+        <!-- cart -->
+        <div class="dropdown">
+          <a
+            href="#"
+            class="nav-link d-flex align-items-center gap-1 dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            <i class="fa-regular fa-clipboard"></i>
+            <span id="user-cart">Cart:</span>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end p-2"
+            id="cart-dropdown"
+          ></ul>
+        </div>
+                <!-- fav -->
+        <div class="dropdown">
+          <a
+            href="#"
+            class="nav-link d-flex align-items-center gap-1 dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            <i class="fa-regular fa-clipboard"></i>
+            <span id="user-fav">FAVOURITE:</span>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end p-2"
+            id="fav-dropdown"
+          ></ul>
+        </div>
+        <!-- account -->
+        <div id="account">
+        <button
+          href="#"
+          class="nav-link d-flex align-items-center gap-1 dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="fa-regular fa-user"></i>
+          <span id="user-account">Account</span>
+        </button>
+        <div class="dropdown-menu" id="dropdown-menu"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- </div> -->
+  </div>
+</nav>

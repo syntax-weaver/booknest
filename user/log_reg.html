@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookVerse | Login & Register</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Css/Reg-log/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <div class="container">
+      <div class="form-with-image" id="mainContainer">
+        <div class="image-section left" id="imageSlider"></div>
+        <div class="form-section left" id="formContainer">
+          <div class="book" id="book">
+            <!-- Login Page -->
+            <div class="page front">
+              <h2>Login</h2>
+              <p class="quote" id="loginQuote"></p>
+
+              <div class="form-group email">
+                <input
+                  type="email"
+                  id="loginEmail"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+
+              <div class="form-group password">
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+
+              <!-- رابط Forgot Password -->
+              <p style="margin-top: -10px; text-align: right">
+                <a href="#" onclick="showResetPopup()" style="font-size: 0.9em"
+                  >Forgot Password?</a
+                >
+              </p>
+
+              <div class="remember-me">
+                <input type="checkbox" id="rememberMe" />
+                <label for="rememberMe">Remember me</label>
+              </div>
+
+              <p class="error" id="loginError"></p>
+              <p class="success" id="loginSuccess"></p>
+              <button type="button" onclick="handleLogin()">Login</button>
+
+              <p>
+                Don't have an account?
+                <a href="#" onclick="swapAndFlip()">Create one</a>
+              </p>
+              <p>
+                Back to Home
+                <a href="home.html">Home</a>
+              </p>
+            </div>
+
+            <!-- Register Page -->
+            <div class="page back">
+              <h2>Create Account</h2>
+              <p class="quote" id="registerQuote"></p>
+
+              <div class="form-row">
+                <div class="form-group name">
+                  <input
+                    type="text"
+                    id="regName"
+                    placeholder="Full Name"
+                    required
+                  />
+                </div>
+                <div class="custom-select" id="roleSelect">
+                  <div class="select-trigger">👤 User</div>
+                  <div class="options">
+                    <div class="option" data-value="user">User</div>
+                    <div class="option" data-value="seller">Seller</div>
+                  </div>
+                </div>
+                <input type="hidden" name="role" id="roleValue" value="user" />
+              </div>
+
+              <div class="form-group email">
+                <input
+                  type="email"
+                  id="regEmail"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+
+              <div class="form-group password">
+                <input
+                  type="password"
+                  id="regPassword"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+
+              <p class="error" id="regError"></p>
+              <p class="success" id="regSuccess"></p>
+              <button type="button" onclick="handleRegister()">Register</button>
+
+              <p>
+                Already have an account?
+                <a href="#" onclick="swapAndFlip()">Login</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Reset Password -->
+    <div id="resetPopup" class="popup" style="display: none">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closeResetPopup()">&times;</span>
+        <h3>Reset Password</h3>
+
+        <div class="form-group">
+          <input
+            type="email"
+            id="resetEmail"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="password"
+            id="resetNewPassword"
+            placeholder="Enter new password"
+            required
+          />
+        </div>
+
+        <p class="error" id="resetError"></p>
+        <p class="success" id="resetSuccess"></p>
+
+        <button type="button" onclick="handleResetPassword()">
+          Update Password
+        </button>
+      </div>
+    </div>
+
+    <script src="Js/reg-log/script.js"></script>
+    <script>
+      const select = document.getElementById("roleSelect");
+      const trigger = select.querySelector(".select-trigger");
+      const options = select.querySelectorAll(".option");
+      const hiddenInput = document.getElementById("roleValue");
+
+      trigger.addEventListener("click", () => {
+        select.classList.toggle("open");
+      });
+
+      options.forEach((option) => {
+        option.addEventListener("click", () => {
+          trigger.textContent = option.textContent;
+          hiddenInput.value = option.dataset.value;
+          select.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>
