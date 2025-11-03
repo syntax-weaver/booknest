@@ -1,4 +1,7 @@
 # ITITeam3BookShop
+
+This project was developed collaboratively with Fady Saamir Nabil, Bassel Essam Kamal Mohamed and Alaa Amr Mohammed.
+
 this repo is a workflow for my team in iti to use
 # 📚 Book Shop Project
 
